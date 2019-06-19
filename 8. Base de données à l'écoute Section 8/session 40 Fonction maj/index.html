@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>D3</title>
+</head>
+<body>
+
+ <div class="box"></div>
+
+
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDv2TSUhzx6p0521q8qZ-9w5tB-TBLY4-Q",
+    authDomain: "d3-cours-projet.firebaseapp.com",
+    databaseURL: "https://d3-cours-projet.firebaseio.com",
+    projectId: "d3-cours-projet",
+    storageBucket: "d3-cours-projet.appspot.com",
+    messagingSenderId: "706910078215",
+    appId: "1:706910078215:web:72dcb808af134358"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  
+</script>
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
