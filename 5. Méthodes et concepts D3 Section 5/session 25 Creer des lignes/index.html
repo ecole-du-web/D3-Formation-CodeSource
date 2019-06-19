@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+    <title>Line</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>  
+    <style>
+    path {
+      fill: none;
+      stroke: red;
+      stroke-width: 5;
+    }
+    </style>
+  </head>
+  <body>
+        <script>
+  
+        var data = [{point:200}, {point:150}, {point:80}, {point:220}, {point:130}];
+
+        var svg = d3.select('body')
+                    .append('svg')
+                    .attr('width', 600)
+                    .attr('height', 500)
+                    .style('background', 'antiqueWhite');
+        
+        var line = d3.line()
+                     .x(function(d){return d.point})
+                     .y(function(d,i){return (i+1)*50;})
+                     .curve(d3.curveBasisClosed)
+
+        svg.append('path').attr('d', line(data))
+
+
+        </script>
+  </body>
+</html>
