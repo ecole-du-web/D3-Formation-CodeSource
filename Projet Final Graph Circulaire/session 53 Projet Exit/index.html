@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projet d3</title>
+    <!-- CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body class="bg-dark">
+    
+<h2 class="text-center display-4 text-white m-5">D3 Graph Circulaire</h2>
+<br><br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 mt-5 mr-5">
+            <form>
+                <div class="form-group">
+                    <label class="text-white" for='nom'>Nom de l'item</label>
+                    <input type="text" class="form-control" id="nom">
+                </div>
+                <div class="form-group">
+                    <label class="text-white" for='prix'>Prix de l'item</label>
+                    <input type="text" class="form-control" id="prix">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Rajouter</button> 
+                <p class="text-white" id="erreur"></p>
+            </form>
+        </div>
+
+        <div class="col-md-5 ml-5">
+            <div class="box ml-5 mt-5"></div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDv2TSUhzx6p0521q8qZ-9w5tB-TBLY4-Q",
+    authDomain: "d3-cours-projet.firebaseapp.com",
+    databaseURL: "https://d3-cours-projet.firebaseio.com",
+    projectId: "d3-cours-projet",
+    storageBucket: "d3-cours-projet.appspot.com",
+    messagingSenderId: "706910078215",
+    appId: "1:706910078215:web:72dcb808af134358"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="app.js"></script>
+    <script src="graph.js"></script>
+</body>
+</html>
