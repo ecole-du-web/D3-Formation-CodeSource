@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Tween</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script> 
+    <style>
+        #content
+        {
+            width:400px;
+            height:120px;
+            display: block;
+            margin: auto;
+            color:rgb(0, 0, 0);
+            font-size:10px;
+            text-align:center;
+            margin-top:200px;
+        }
+        button{
+          display: block;
+          margin: auto;
+        }
+    </style>
+</head>
+<body>    
+    <input type="text" id="content" value="0" disabled /><br />
+    <button onclick="showNumbers();">100</button>
+
+
+    <script>
+      function showNumbers(){
+        d3.select('#content')
+          .transition()
+          .duration(5000)
+          .ease(d3.easeLinear)
+          //.attr('value', 100);
+          .attrTween('value', function(){
+            var numbers = d3.interpolateRound(-10,100);
+            return function(i){return numbers(i)}
+          })
+          .styleTween('font-size', function(){
+            var size = d3.interpolateString('10px', '70px');
+            return function(i){ return size(i)}
+          })
+      }
+    </script>
+</body>
+</html>
